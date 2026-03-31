@@ -623,7 +623,7 @@ function App() {
             <div className="relative group overflow-hidden rounded-2xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
               <img
                 src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/eranker/fiverr%20UPDATE.jpg"
-                alt="Fiverr profile showing 5/5 stars from 187 reviews - Ion V. Level 1 Etsy Seller"
+                alt="Fiverr profile showing 5/5 stars from 225 reviews - Ion V. Level 1 Etsy Seller"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
               />
@@ -637,7 +637,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#1dbf73] hover:bg-[#19a463] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All 187 Reviews on Fiverr
+                View All 225 Reviews on Fiverr
               </a>
             </div>
           </div>
