@@ -622,7 +622,7 @@ function App() {
           <div className="max-w-4xl mx-auto">
             <div className="relative group overflow-hidden rounded-2xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
               <img
-                src="https://eranker.net/fiverr.jpg"
+                src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/eranker/fiverr.jpg"
                 alt="Fiverr profile showing 5/5 stars from 187 reviews - Ion V. Level 1 Etsy Seller"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
