@@ -7,6 +7,7 @@ import { CalendarModal } from './components/CalendarModal';
 import { WhatsAppModal } from './components/WhatsAppModal';
 import { InstructionsPage } from './components/InstructionsPage';
 import { Calculator } from './components/Calculator';
+import { KeywordImpactCalculator } from './components/KeywordImpactCalculator';
 import { successStories } from './config/successStories';
 
 function TestimonialCard({ name, role, text, rating }) {
@@ -172,6 +173,13 @@ function FloatingMenu() {
               >
                 Calculator
               </a>
+              <a
+                href="/calculator2"
+                className="block py-2 text-gray-300 hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Impact Calculator
+              </a>
               <button 
                 onClick={() => {
                   // openCalendarModal();
@@ -210,6 +218,7 @@ function FloatingMenu() {
               <a href="#social-proof" className="text-gray-300 hover:text-white transition-colors">Reviews</a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
               <a href="/calculator" className="text-gray-300 hover:text-white transition-colors">Calculator</a>
+              <a href="/calculator2" className="text-gray-300 hover:text-white transition-colors">Impact</a>
               {/* <button
                 onClick={openCalendarModal}
                 className="text-gray-300 hover:text-white transition-colors"
@@ -364,6 +373,8 @@ function App() {
       setCurrentPage('instructions');
     } else if (path === '/calculator') {
       setCurrentPage('calculator');
+    } else if (path === '/calculator2') {
+      setCurrentPage('calculator2');
     } else {
       setCurrentPage('home');
     }
@@ -377,6 +388,8 @@ function App() {
         setCurrentPage('instructions');
       } else if (path === '/calculator') {
         setCurrentPage('calculator');
+      } else if (path === '/calculator2') {
+        setCurrentPage('calculator2');
       } else {
         setCurrentPage('home');
       }
@@ -404,6 +417,10 @@ function App() {
 
   if (currentPage === 'calculator') {
     return <Calculator />;
+  }
+
+  if (currentPage === 'calculator2') {
+    return <KeywordImpactCalculator />;
   }
 
   const scrollToCalendar = () => {
