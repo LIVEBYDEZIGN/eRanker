@@ -173,13 +173,6 @@ function FloatingMenu() {
               >
                 Calculator
               </a>
-              <a
-                href="/calculator2"
-                className="block py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Impact Calculator
-              </a>
               <button 
                 onClick={() => {
                   // openCalendarModal();
@@ -218,7 +211,6 @@ function FloatingMenu() {
               <a href="#social-proof" className="text-gray-300 hover:text-white transition-colors">Reviews</a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
               <a href="/calculator" className="text-gray-300 hover:text-white transition-colors">Calculator</a>
-              <a href="/calculator2" className="text-gray-300 hover:text-white transition-colors">Impact</a>
               {/* <button
                 onClick={openCalendarModal}
                 className="text-gray-300 hover:text-white transition-colors"
@@ -373,8 +365,8 @@ function App() {
       setCurrentPage('instructions');
     } else if (path === '/calculator') {
       setCurrentPage('calculator');
-    } else if (path === '/calculator2') {
-      setCurrentPage('calculator2');
+    } else if (path === '/impact') {
+      setCurrentPage('impact');
     } else {
       setCurrentPage('home');
     }
@@ -388,8 +380,8 @@ function App() {
         setCurrentPage('instructions');
       } else if (path === '/calculator') {
         setCurrentPage('calculator');
-      } else if (path === '/calculator2') {
-        setCurrentPage('calculator2');
+      } else if (path === '/impact') {
+        setCurrentPage('impact');
       } else {
         setCurrentPage('home');
       }
@@ -419,7 +411,7 @@ function App() {
     return <Calculator />;
   }
 
-  if (currentPage === 'calculator2') {
+  if (currentPage === 'impact') {
     return <KeywordImpactCalculator />;
   }
 
@@ -630,7 +622,7 @@ function App() {
           <div className="max-w-4xl mx-auto">
             <div className="relative group overflow-hidden rounded-2xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
               <img
-                src="/fiverr.jpg"
+                src="https://eranker.net/fiverr.jpg"
                 alt="Fiverr profile showing 5/5 stars from 187 reviews - Ion V. Level 1 Etsy Seller"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
