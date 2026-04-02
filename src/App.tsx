@@ -539,7 +539,7 @@ function App() {
               {/* Image 1 - Mobile: 1st, Desktop: Top Left */}
               <div className="relative group overflow-hidden rounded-xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
                 <img
-                  src="/1.png"
+                  src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/1.png"
                   alt="Client analytics dashboard showing revenue growth - $338,171.37"
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -549,7 +549,7 @@ function App() {
               {/* Image 2 - Mobile: 2nd, Desktop: Top Right */}
               <div className="relative group overflow-hidden rounded-xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
                 <img
-                  src="/2.png"
+                  src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/2.png"
                   alt="Client analytics dashboard showing revenue growth - $619,315.93"
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -559,7 +559,7 @@ function App() {
               {/* Image 3 - Mobile: 3rd, Desktop: Bottom Left */}
               <div className="relative group overflow-hidden rounded-xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
                 <img
-                  src="/3.png"
+                  src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/3.png"
                   alt="Client analytics dashboard showing revenue growth - $587,495.69"
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -569,7 +569,7 @@ function App() {
               {/* Image 4 - Mobile: 4th, Desktop: Bottom Right */}
               <div className="relative group overflow-hidden rounded-xl border border-[#ff5702]/10 transition-all duration-300 hover:border-[#ff5702]/30">
                 <img
-                  src="/4.png"
+                  src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/4.png"
                   alt="Client analytics dashboard showing revenue growth - $287,495.69"
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -714,7 +714,7 @@ function App() {
         <div className="max-w-4xl mx-auto px-2 sm:px-2 lg:px-8 text-center">
           <div className="mb-8">
             <img
-              src="/Untitled-1.png"
+              src="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/logo.png"
               alt="eRanker Logo"
               className="w-16 h-16 md:w-20 md:h-20 mx-auto"
             />
