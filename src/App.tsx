@@ -479,7 +479,7 @@ function App() {
           <div className="text-center">
             <h1 
               className="text-4xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 gradient-text flex flex-col"
-              data-text="RANK ON THE 1ST PAGE IN 7 DAYS"
+              data-text=" "
             >
               <span>ETSY SELLER</span>
               <span>WE'LL RANK YOUR LISTING ON PAGE 1 IN 7 DAYS</span>
