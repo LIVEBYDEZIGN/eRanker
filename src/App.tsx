@@ -477,12 +477,9 @@ function App() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-32 pb-8 md:pb-16 relative">
           <div className="text-center">
-            <h1 
-              className="text-4xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 gradient-text flex flex-col"
-              data-text=" "
-            >
-              <span>ETSY SELLER</span>
-              <span>WE'LL RANK YOUR LISTING ON PAGE 1 IN 7 DAYS</span>
+            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 flex flex-col gap-2">
+              <span className="text-white">ETSY SELLER</span>
+              <span className="gradient-text">WE'LL RANK YOUR LISTING ON PAGE 1 IN 7 DAYS</span>
             </h1>
             <p className="text-2xl sm:text-3xl md:text-4xl text-white font-semibold mb-8 md:mb-12 px-0">
               Rank Higher → Get More Visits → Make More Sales!
