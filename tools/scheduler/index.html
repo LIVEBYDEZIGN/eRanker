@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eranker · Scheduler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="editor.css?v=590ea016b691">
+<script src="editor-core.js?v=bf2efd1905b5" defer></script>
+<script src="editor.js?v=32b37f20be81" defer></script>
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="https://eranker.net" target="_blank" rel="noopener" aria-label="Eranker website">Eranker<span class="brand-dot">.</span></a>
+  <span class="header-label">Scheduler</span>
+  <div id="fileActions" class="header-actions" hidden>
+    <button id="undoButton" class="button quiet" title="Undo (Ctrl or ⌘ Z)" hidden>Undo</button>
+    <button id="openButton" class="button quiet">Open file</button>
+    <button id="downloadButton" class="button primary">Download <span aria-hidden="true">↓</span></button>
+  </div>
+</header>
+<main>
+  <section id="emptyState" class="empty-state">
+    <div id="dropZone" class="drop-zone">
+      <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+      <h1>Drop your scheduler file</h1>
+      <button id="chooseButton" class="button primary">Choose file</button>
+      <p>JSON files</p>
+    </div>
+  </section>
+  <section id="workspace" hidden>
+    <div class="toolbar"><div class="file-title"><h1>Tasks <span id="taskCount"></span></h1><p><span id="filename"></span><span id="dirtyDot" class="dirty-dot" title="Changes not downloaded" aria-label="Changes not downloaded" hidden></span></p></div><button id="addButton" class="button primary"><span aria-hidden="true">+</span> Add task</button></div>
+    <div id="selectionBar" class="selection-bar" hidden><span id="selectedCount"></span><button id="bulkScheduleButton" class="text-button">Set schedule</button><button id="bulkStatusButton" class="text-button">Change status</button><button id="clearSelection" class="text-button dismiss">Clear</button></div>
+    <div class="table-wrap"><table aria-label="Tasks"><thead><tr><th class="check-col"><input id="selectAll" type="checkbox" aria-label="Select all tasks"></th><th>Task name</th><th>Listing ID</th><th>Keyword</th><th>Proxy</th><th>Schedule</th><th>Status</th><th class="actions-col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="taskRows"></tbody></table></div>
+    <div id="noTasks" class="no-tasks" hidden>No tasks. Add one to get started.</div>
+  </section>
+</main>
+<input id="fileInput" type="file" accept=".json,application/json" hidden>
+<div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+<dialog id="scheduleDialog" aria-labelledby="scheduleTitle"><form id="scheduleForm"><div class="dialog-heading"><h2 id="scheduleTitle">Schedule</h2><button type="button" class="icon-button close-dialog" aria-label="Close">×</button></div><div id="scheduleBody"></div><p id="scheduleError" class="form-error" role="alert" hidden></p><div class="dialog-actions"><button type="button" class="button quiet close-dialog">Cancel</button><button type="submit" class="button primary">Save</button></div></form></dialog>
+<dialog id="proxyDialog" aria-labelledby="proxyTitle"><form id="proxyForm"><div class="dialog-heading"><h2 id="proxyTitle">Proxy</h2><button type="button" class="icon-button close-dialog" aria-label="Close">×</button></div><label class="sr-only" for="proxyInput">Proxy</label><textarea id="proxyInput" rows="4" spellcheck="false" autocomplete="off" placeholder="Paste your proxy"></textarea><div class="dialog-actions"><button type="button" class="button quiet close-dialog">Cancel</button><button type="submit" class="button primary">Save</button></div></form></dialog>
+<dialog id="confirmDialog" aria-labelledby="confirmTitle"><form method="dialog"><h2 id="confirmTitle">Discard your changes?</h2><p>Your changes haven’t been downloaded.</p><div class="dialog-actions"><button class="button quiet" value="cancel">Keep editing</button><button class="button primary" value="discard">Discard changes</button></div></form></dialog>
+</body>
+</html>
