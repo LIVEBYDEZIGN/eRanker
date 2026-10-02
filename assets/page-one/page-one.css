@@ -1,0 +1,114 @@
+/* Reuse the site's orange, type, glass, grid, perspective and easing.
+   The deck moves only when a visitor chooses a different search. */
+#page-one { scroll-margin-top: 88px; padding: 1rem 0 3rem; overflow: hidden; }
+.rank-scene { max-width: 64rem; margin: 0 auto; }
+.rank-stage {
+    position: relative; display: grid; margin: 0 2.5rem; padding: 7.75rem 0 1rem;
+    perspective: 2000px; isolation: isolate;
+}
+.rank-scene-glow { position: absolute; width: 38%; height: 60%; top: 15%; left: 14%; border-radius: 50%; background: rgba(255,87,2,.1); filter: blur(48px); z-index: -1; }
+.rank-surface {
+    position: relative; grid-area: 1 / 1; min-width: 0; padding: 1.5rem 1.75rem 1rem;
+    border: 1px solid #e2e8f0; border-radius: 1rem;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    transform-origin: 50% 0;
+    transform: rotateX(5deg) rotateZ(-1deg);
+    box-shadow: 0 20px 50px -12px rgba(0,0,0,.1);
+    z-index: 3;
+    transition: transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .6s ease, background-color .6s ease;
+}
+.rank-surface[data-slot="left"] { z-index: 1; transform: translate(-3%, -7rem) rotateX(5deg) rotateZ(-1.5deg) scale(.94); cursor: pointer; padding-top: .75rem; }
+.rank-surface[data-slot="right"] { z-index: 2; transform: translate(3%, -3.5rem) rotateX(5deg) rotateZ(1deg) scale(.97); cursor: pointer; padding-top: .75rem; }
+.rank-surface:not([data-slot="front"]) .rank-result-view { opacity: .55; }
+.rank-surface:not([data-slot="front"]) .rank-search-icon { background: #f1f5f9; color: #64748b; }
+.rank-search-row { width: 100%; display: flex; align-items: center; gap: 1.25rem; border: 0; padding: 0; background: transparent; text-align: left; cursor: inherit; border-radius: .75rem; }
+.rank-search-row:focus-visible { outline: 2px solid #ff5702; outline-offset: 6px; }
+.rank-etsy { font-family: Georgia,serif; font-size: 2.25rem; letter-spacing: -.07em; line-height: 1; }
+.rank-search { flex: 1; min-width: 0; min-height: 2.75rem; display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: .3rem .3rem .3rem 1.3rem; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+.rank-query { display: block; font-size: 1rem; letter-spacing: -.02em; overflow: hidden; white-space: nowrap; }
+.rank-search-icon { width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.rank-toolbar { display: flex; align-items: center; gap: 1rem; margin: 1.25rem 0; }
+.rank-filter { display: inline-flex; align-items: center; gap: .5rem; font-size: .6875rem; border-radius: 999px; padding: .375rem .75rem; }
+.rank-results-note { font-size: .75rem; }
+.rank-page-label { margin-left: auto; display: flex; align-items: center; gap: .5rem; font-size: 1rem; font-weight: 600; padding: .375rem .875rem; border: 1px solid rgba(255,87,2,.25); background: rgba(255,87,2,.08); border-radius: 999px; white-space: nowrap; }
+.rank-page-dot { width: 6px; height: 6px; border-radius: 50%; }
+.rank-products { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1.25rem .875rem; }
+.rank-product { min-width: 0; color: #0f172a; }
+.rank-product-image { position: relative; aspect-ratio: 1.2; overflow: hidden; border-radius: .5rem; background: #f1f5f9; }
+.rank-product-image svg, .rank-product-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.rank-favorite { position: absolute; top: .4rem; right: .4rem; display: grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: rgba(255,255,255,.95); color: #0f172a; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.rank-product-details { padding: .6rem .125rem .2rem; }
+.rank-product-title { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: .75rem; line-height: 1.35; font-weight: 500; }
+.rank-product-kind { display: block; margin-top: .3rem; font-size: .625rem; line-height: 1.4; color: #64748b; }
+.rank-product--yours { position: relative; z-index: 5; opacity: 1; }
+.rank-winner {
+    position: relative; border-radius: .5rem;
+    background: #fff;
+    outline: 2px solid #ff5702; outline-offset: 4px;
+    box-shadow: 0 12px 36px rgba(255,87,2,.15);
+}
+.rank-winner .rank-product-details { padding-left: .35rem; padding-right: .35rem; }
+.rank-winner-caption { display: flex; align-items: center; gap: .4rem; margin-top: .3rem; font-size: .625rem; line-height: 1.4; font-weight: 600; color: #0f172a; }
+.rank-winner-dot { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: #ff5702; box-shadow: 0 0 12px rgba(255,87,2,.35); }
+.rank-pagination { display: flex; align-items: center; justify-content: center; gap: .5rem; padding-top: 1.25rem; font-size: .75rem; }
+.rank-pagination span { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; }
+.rank-current-page { color: #fff; background: #0f172a; font-weight: 600; }
+.rank-caption { position: relative; margin-top: 1.5rem; z-index: 5; }
+html.dark .rank-surface { background: rgba(5,5,5,.9); border-color: rgba(255,255,255,.1); box-shadow: 0 -40px 100px -30px rgba(255,87,2,.15); }
+html.dark .rank-surface:not([data-slot="front"]) { background: #151518; }
+html.dark .rank-surface:not([data-slot="front"]) .rank-search-icon { background: #252529; color: #94a3b8; }
+html.dark .rank-product { color: #f8fafc; }
+html.dark .rank-product-kind { color: #94a3b8; }
+html.dark .rank-winner { background: #151518; }
+html.dark .rank-winner-caption { color: #fff; }
+html.dark .rank-current-page { color: #0f172a; background: #e2e8f0; }
+@media (min-width: 641px) and (hover: hover) {
+    .rank-surface[data-slot="left"]:hover { transform: translate(-3%, -7.3rem) rotateX(5deg) rotateZ(-1.5deg) scale(.94); }
+    .rank-surface[data-slot="right"]:hover { transform: translate(3%, -3.8rem) rotateX(5deg) rotateZ(1deg) scale(.97); }
+    .rank-surface:not([data-slot="front"]):hover .rank-search { border-color: #ff5702; }
+}
+@media (max-width: 1023px) {
+    .rank-stage { margin: 0 1.5rem; }
+    .rank-surface { padding: 1.25rem; }
+    .rank-products { gap: 1rem .625rem; }
+    .rank-product-title { font-size: .6875rem; }
+}
+@media (max-width: 640px) {
+    #page-one { padding: 0 0 2.5rem; }
+    .rank-stage { margin: 0 1rem; padding: 7rem 0 1rem; }
+    .rank-surface { padding: 1rem .75rem .75rem; transform: rotateZ(-1deg); }
+    .rank-surface[data-slot="left"] { transform: translate(-1.5%, -6rem) rotateZ(-1.5deg) scale(.95); }
+    .rank-surface[data-slot="right"] { transform: translate(1.5%, -3rem) rotateZ(1deg) scale(.975); }
+    .rank-search-row { gap: .75rem; }
+    .rank-etsy { font-size: 1.75rem; }
+    .rank-search { padding-left: .8rem; }
+    .rank-query { font-size: .75rem; }
+    .rank-search-icon { width: 2rem; height: 2rem; }
+    .rank-search-icon iconify-icon { font-size: 16px; }
+    .rank-toolbar { margin: 1rem 0; gap: .5rem; }
+    .rank-filter { display: none; }
+    .rank-results-note { font-size: .625rem; }
+    .rank-page-label { font-size: .8125rem; padding: .3rem .65rem; }
+    .rank-products { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem .65rem; }
+    .rank-product--desktop-only { display: none; }
+    .rank-product-title { font-size: .625rem; }
+    .rank-product-kind { font-size: .5625rem; }
+    .rank-winner-caption { font-size: .5625rem; gap: .25rem; }
+    .rank-favorite { width: 1.25rem; height: 1.25rem; top: .3rem; right: .3rem; }
+    .rank-favorite iconify-icon { width: 12px; height: 12px; }
+    .rank-winner { outline-offset: 3px; }
+    .rank-pagination { padding-top: .875rem; }
+    .rank-caption { margin-top: .75rem; }
+    .rank-caption h2 { max-width: 26rem; margin: 0 auto; text-wrap: balance; }
+    .rank-caption p { max-width: 22rem; margin-left: auto; margin-right: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .rank-surface { transition: none; }
+}
+@media (max-width: 359px) {
+    .rank-etsy { font-size: 1.5rem; }
+    .rank-query { font-size: .625rem; }
+    .rank-search-row { gap: .5rem; }
+    .rank-winner-caption { font-size: .5625rem; }
+}

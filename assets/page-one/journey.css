@@ -1,0 +1,6 @@
+/* Approved shorter journey: reuse the site's existing colors and card treatment. */
+body[data-journey="shorter"] :is(#process, #services, #proof) { scroll-margin-top: 96px; }
+#proof .journey-story > img { display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+.journey-story figcaption { min-height: 56px; }
+.journey-proof #more-stories-btn { min-height: 44px; }
+.journey-proof #more-user-stories > .grid { align-items: start; }

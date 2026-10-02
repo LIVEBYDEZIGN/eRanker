@@ -1,0 +1,28 @@
+/* Audit fixes only: keep the accepted site tokens and component appearance. */
+#audit-modal [onclick="closeAuditModal()"]:is(button) {
+  min-width: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+#audit-modal-content { max-height: min(90vh, calc(100dvh - 32px)); }
+#audit-modal input { font-size: 16px; }
+#audit-modal #btn-next, #audit-modal #btn-back { min-height: 44px; }
+#audit-modal .review-field-error { margin-top: 6px; color: #b91c1c; font-size: 14px; }
+.dark #audit-modal .review-field-error { color: #fca5a5; }
+#audit-modal [data-save-confirmed="false"] > div:first-child {
+  background: rgb(255 87 2 / 0.08);
+  border-color: rgb(255 87 2 / 0.2);
+  color: #c2410c;
+}
+.dark #audit-modal [data-save-confirmed="false"] > div:first-child { color: #fb923c; }
+@media (max-width: 360px) {
+  body > nav.fixed { padding-left: 12px; padding-right: 12px; gap: 8px; }
+  body > nav > a { flex-shrink: 0; }
+  body > nav > .flex.items-center.gap-3 { gap: 6px; }
+  body > nav > .flex.items-center.gap-3 > button:last-child { font-size: 12px; padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #audit-modal-content, #audit-progress, #faq .faq-answer { transition: none; }
+}
