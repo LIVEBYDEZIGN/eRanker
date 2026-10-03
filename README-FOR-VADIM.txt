@@ -1,3 +1,28 @@
+APPROVED WEBSITE RELEASE, OCTOBER 2, 2026
+
+The approved website and all assets are already on main at f935960.
+The current entry file is index.html. No build command is required for this
+static release. Keep assets/, social proof assets/, tools/, privacy.html and
+terms.html together with index.html.
+
+Publishing from the existing owner's GitHub account:
+  Merge this documentation update into main using "Create a merge commit"
+  from LIVEBYDEZIGN. This creates a new owner-made commit containing the
+  approved website already on main, without changing the website itself.
+  If the deployment is held only by Netlify's new-contributor restriction,
+  this should trigger the existing owner's automatic deployment.
+  Check the Netlify deploy result and eranker.net before calling it live.
+
+Current local preview:
+  python3 -m http.server 8901
+  then http://localhost:8901/
+
+The ZIP contains the complete static site, including the native hero video.
+The live release is identifiable by "Rank your Etsy listings on page 1."
+and the HTML release marker "2026-10-02-approved-website".
+
+HISTORICAL JULY HANDOFF NOTES (retained below; filename and inventory are old)
+
 eRanker website, handoff build
 Generated 2026-07-20
 
