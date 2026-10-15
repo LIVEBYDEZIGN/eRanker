@@ -1,0 +1,275 @@
+/* Separate design proposal. Uses the existing eRanker palette, face and assets. */
+body {
+  --pass-ink: #0f172a;
+  --pass-muted: #475569;
+  --pass-orange: #ff5702;
+  --pass-surface: #fff;
+  --pass-paper: #fff4ed;
+  --pass-line: #e2e8f0;
+  --pass-soft: rgb(255 255 255 / .92);
+  --pass-width: 1280px;
+}
+html.dark { color-scheme: dark; }
+html.dark body {
+  --pass-ink: #fff;
+  --pass-muted: #94a3b8;
+  --pass-surface: #050505;
+  --pass-paper: #0c0a09;
+  --pass-line: rgb(255 255 255 / .1);
+  --pass-soft: rgb(5 5 5 / .94);
+}
+body .font-mono { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+body .glow-blob { opacity: .38; animation: none; }
+.tech-grid { opacity: .12; }
+.spotlight-overlay, .energy-streak { display: none; }
+.btn-glow-border::before { background: var(--pass-orange); animation: none; }
+.cta-breathe { animation: none; }
+button, a { touch-action: manipulation; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--pass-orange); outline-offset: 5px; }
+.pass-skip-link { position: fixed; top: 8px; left: 16px; z-index: 60; padding: 12px 20px; background: var(--pass-surface); color: var(--pass-ink); border-radius: 6px; transform: translateY(-180%); }
+.pass-skip-link:focus { transform: translateY(0); }
+#home:focus { outline: none; }
+#home .btn-text-hover { color: #fff; }
+#audit-modal .overflow-y-auto { overscroll-behavior: contain; }
+section { scroll-margin-top: 88px; }
+section p { text-wrap: pretty; }
+section h2 { text-wrap: balance; }
+body > nav { padding-inline: max(24px, calc((100vw - 1280px) / 2)); background: var(--pass-soft); }
+body > nav > .hidden { background: transparent; border: 0; box-shadow: none; }
+body > nav a { transition: color .2s ease, background-color .2s ease; }
+
+/* A larger, compact opening: the video and the promise share the first screen. */
+body #home { min-height: 0; padding: 164px 0 80px; }
+#home > .grid { max-width: calc(var(--pass-width) + 48px); gap: 32px 56px; align-items: center; }
+#home h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.02; letter-spacing: -.055em;
+  background: none; color: var(--pass-ink); filter: none;
+  padding-bottom: 0; margin-bottom: 28px;
+}
+#home h1 > span { color: var(--pass-orange); }
+#home > .grid > div:first-child { text-align: left; }
+#home > .grid > div:first-child > div {
+  padding: 0; border: 0; border-radius: 0; background: none;
+  box-shadow: none; backdrop-filter: none; font-size: 14px; margin-bottom: 24px;
+}
+#home .animate-ping { display: none; }
+#home > .grid > div:first-child > p { max-width: 32rem; margin-left: 0; line-height: 1.65; }
+#home > .grid > div:first-child > p > span { text-wrap: initial; }
+#home > .grid > div:nth-child(2) { margin-top: 0; }
+#hero-video-card { border-radius: 16px; background: var(--pass-surface); box-shadow: 0 20px 45px -24px rgb(15 23 42 / .25); }
+#hero-video-card .card-caption { padding: 20px 24px; }
+#home > .grid > div:last-child { max-width: none; margin: 0; }
+#home > .grid > div:last-child > div { align-items: flex-start; gap: 18px; }
+#home .btn-glow-border { box-shadow: none; }
+#home .btn-glow-border > button { padding: 18px 28px; }
+#home > .grid > div:last-child > div > button {
+  width: auto; padding: 2px 0; border: 0; box-shadow: none;
+  background: none; backdrop-filter: none; font-size: 14px;
+  justify-content: flex-start; min-height: 44px;
+}
+#home > .grid > div:last-child > div > button span { border-bottom-color: var(--pass-line); }
+html:not(.dark) #home > .grid > div:last-child > div > button img { filter: brightness(.25); }
+
+/* The existing search deck is the focal object between the opening and trial. */
+body #page-one { padding-top: 20px; padding-bottom: 88px; }
+#page-one .rank-caption { margin-top: 32px; }
+#page-one .rank-caption p { max-width: 38rem; margin-inline: auto; }
+
+/* Clear section hierarchy without adding copy, badges or new brand elements. */
+:is(#process, #proof, #services, #team, #pricing, #faq) { padding-block: 100px; border-top: 0; }
+:is(#process, #proof, #services, #team, #pricing, #faq) > .relative { max-width: calc(var(--pass-width) + 48px); }
+:is(#process, #proof, #services, #team, #pricing, #faq) h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.08; letter-spacing: -.04em;
+}
+:is(#process, #services) > .relative > div:first-child > .font-mono,
+#proof > .relative > div:first-child > .font-mono {
+  text-transform: none; letter-spacing: 0; font-size: 14px; margin-bottom: 20px;
+}
+#process, #team, #faq { background: var(--pass-soft); }
+#proof { background: var(--pass-paper); }
+
+/* The trial becomes a guided sequence, with one introduction and three open rows. */
+#process > .relative { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 28px 100px; }
+#process > .relative > div:first-child { margin: 0; grid-column: 1; grid-row: 1; }
+#process > .relative > .grid { grid-column: 2; grid-row: 1 / 3; grid-template-columns: 1fr; gap: 0; }
+#process > .relative > .grid > div {
+  border: 0; border-radius: 0; box-shadow: none; backdrop-filter: none; background: none;
+  padding: 28px 0 28px 72px; border-bottom: 1px solid var(--pass-line);
+}
+#process > .relative > .grid > div:first-child { padding-top: 0; }
+#process > .relative > .grid > div:last-child { padding-bottom: 0; border-bottom: 0; }
+#process > .relative > .grid > div > span {
+  left: 0; right: auto; top: 28px; font-size: 30px; line-height: 1; font-weight: 500;
+  letter-spacing: -.04em; color: var(--pass-orange); font-variant-numeric: tabular-nums;
+}
+#process > .relative > .grid > div:first-child > span { top: 3px; }
+#process > .relative > .grid > div > div { display: none; }
+#process > .relative > .grid h3 { margin-bottom: 10px; }
+#process > .relative > .grid p { line-height: 1.6; }
+#process > .relative > div:last-child { grid-column: 1; grid-row: 2; margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+#process > .relative > div:last-child p { font-size: 16px; line-height: 1.6; }
+#process > .relative > div:last-child button { box-shadow: none; }
+
+/* Proof is presented like evidence: title on the left, context on the right. */
+#proof > .relative > div:first-child {
+  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: 0 80px; text-align: left; margin-bottom: 48px; align-items: start;
+}
+#proof > .relative > div:first-child > span { grid-column: 1 / -1; }
+#proof > .relative > div:first-child h2 { grid-column: 1; grid-row: 2 / 4; margin: 0; max-width: 22ch; }
+#proof > .relative > div:first-child p { grid-column: 2; grid-row: 2; margin: 0; max-width: 36rem; }
+#proof > .relative > div:first-child > div { grid-column: 2; grid-row: 3; justify-content: flex-start; margin-top: 20px; }
+#proof > .relative > div:first-child a { background: var(--pass-surface); }
+#proof > .relative > .grid { max-width: none; gap: 28px; align-items: start; }
+#proof .journey-story { box-shadow: none; border-color: var(--pass-line); background: var(--pass-surface); }
+#ranking-videos { margin-top: 72px; }
+#ranking-videos > div:first-child, #shop-results > div:first-child { margin-top: 0; }
+#ranking-videos > div:first-child > .h-px, #shop-results > div:first-child > .h-px { display: none; }
+#shop-results { margin-top: 72px; }
+#shop-results > div:first-child span, #ranking-videos > div:first-child span {
+  text-transform: none; letter-spacing: -.02em; font-size: 24px; font-weight: 500;
+}
+#fiverr-proof a { min-height: 44px; }
+
+/* One product demonstration, with supporting explanations beside it. */
+#services { background: var(--pass-surface); }
+#ranking-details { scroll-margin-top: 104px; }
+#services > .relative > div:first-child { max-width: 50rem; margin-bottom: 48px; }
+#services > .relative > .grid { gap: 0 64px; }
+#services > .relative > .grid > div { transform: none !important; box-shadow: none !important; }
+#services > .relative > .grid > div:first-child { padding: 36px; background: var(--pass-soft); border-color: var(--pass-line); }
+#services > .relative > .grid > div:not(:first-child) { background: none; border: 0; border-radius: 0; padding: 28px 0; backdrop-filter: none; }
+#services > .relative > .grid > div:not(:first-child) > .absolute { display: none; }
+#services > .relative > .grid > div:nth-child(2) { border-bottom: 1px solid var(--pass-line); padding-top: 12px; }
+#services > .relative > .grid > div:not(:first-child) p { flex: none; color: var(--pass-muted); }
+#services > .relative > .grid > div:not(:first-child) .mt-auto { margin-top: 24px; }
+#services > .relative > .grid > div:nth-child(2) .mt-auto {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;
+  opacity: 1; filter: none; align-items: start;
+}
+#services > .relative > .grid > div:nth-child(2) .mt-auto > .w-px { display: none; }
+#services > .relative > .grid > div:nth-child(2) .font-mono {
+  font-size: 13px; line-height: 1.45; letter-spacing: 0; font-weight: 500; color: var(--pass-muted);
+}
+#services > .relative > .grid > div:nth-child(2) .font-mono:last-child {
+  font-size: 18px; font-weight: 600; color: var(--pass-ink);
+}
+#services > .relative > .grid > div:last-child a { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+html:not(.dark) #services > .relative > .grid > div:last-child a { color: #c2410c; }
+#services > .relative > .grid > div:not(:first-child) > div > div:first-child > div {
+  border: 0; background: none; box-shadow: none; width: 28px; height: 28px;
+}
+
+/* People, not four more boxed features. Same portraits, names and roles. */
+#team > .relative > div:first-child { text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-bottom: 48px; }
+#team > .relative > div:first-child h2 { max-width: 16ch; margin: 0; }
+#team > .relative > div:first-child p { margin: 0; max-width: 34rem; }
+#team > .relative > .grid { gap: 40px; }
+#team > .relative > .grid > div { padding: 0; text-align: left; border: 0; border-radius: 0; background: none; box-shadow: none; backdrop-filter: none; }
+#team img { width: 144px; height: 144px; margin: 0 0 24px; border: 0; box-shadow: none; transform: none !important; }
+#team .font-mono { text-transform: none; letter-spacing: 0; font-size: 14px; line-height: 1.45; }
+#team > .relative > .grid > div > div:last-child { font-size: 16px; line-height: 1.6; }
+
+/* Preserve the approved bronze/gold cards and graph. Give their introduction a clear measure. */
+#pricing > .relative > div:first-child { max-width: 56rem; margin: 0 auto 48px; }
+#pricing > .relative > div:first-child p { max-width: 44rem; margin-inline: auto; }
+#pricing .group\/pricing { max-width: 64rem; gap: 32px; }
+#pricing .group\/pricing > div { transform: none !important; opacity: 1 !important; box-shadow: none !important; padding: 2px; }
+#pricing .group\/pricing > div > div { padding: 36px; }
+#pricing figure { font-variant-numeric: tabular-nums; }
+html:not(.dark) #pricing .text-yellow-800\/70 { color: #854d0e; }
+html:not(.dark) #pricing :is(.text-\[\#8f7459\], .text-\[\#a88b70\]) { color: #785e45; }
+html.dark #pricing .text-\[\#a88b70\] { color: #d6c3b0; }
+html.dark #pricing .dark\:text-yellow-200\/60 { color: #fef08a; }
+
+/* Questions have their own reading column instead of another centered panel. */
+#faq > .relative { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: 100px; align-items: start; }
+#faq > .relative > div:first-child { text-align: left; margin: 0; position: sticky; top: 120px; }
+#faq > .relative > div:last-child { border: 0; background: none; border-radius: 0; padding: 0; box-shadow: none; backdrop-filter: none; }
+#faq .faq-item > button { padding-block: 24px; }
+#faq .faq-item:first-child > button { padding-top: 4px; }
+#faq .faq-item > button > span { font-size: 20px; line-height: 1.5; }
+#faq .faq-answer p { font-size: 18px; line-height: 1.65; }
+
+/* A clear closing statement, with the familiar orange action. */
+#cta { padding-block: 88px 32px; border: 0; background: var(--pass-paper); }
+#cta > .relative { max-width: calc(var(--pass-width) + 48px); text-align: left; }
+#cta h2 { font-size: clamp(2rem, 3.8vw, 3.75rem); line-height: 1.08; letter-spacing: -.04em; max-width: 19ch; margin-bottom: 24px; }
+#cta > .relative > p { margin-bottom: 24px; }
+#cta > .relative > button { padding: 16px 28px; margin-bottom: 64px; box-shadow: none; }
+
+@media (min-width: 1024px) {
+  #home > .grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr); }
+  #home > .grid > div:first-child { grid-column: 1; grid-row: 1; }
+  #home > .grid > div:nth-child(2) { grid-column: 2; grid-row: 1 / 3; }
+  #home > .grid > div:last-child { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 1100px) {
+  #process > .relative, #faq > .relative { gap: 32px 48px; }
+  #proof > .relative > div:first-child { gap: 0 48px; }
+  #team > .relative > .grid { gap: 28px; }
+  #services > .relative > .grid { gap: 24px; }
+}
+@media (max-width: 1023px) {
+  body #home { padding-top: 124px; padding-bottom: 48px; }
+  #home > .grid { max-width: 760px; gap: 28px; }
+  #home > .grid > div:first-child { display: contents; }
+  #home > .grid > div:first-child > div { grid-row: 1; margin-bottom: 0; }
+  #home h1 { grid-row: 2; margin-bottom: 0; }
+  #home > .grid > div:nth-child(2) { grid-row: 3; margin-top: 0; }
+  #home > .grid > div:first-child > p { grid-row: 4; margin: 0; }
+  #home > .grid > div:last-child { grid-row: 5; }
+  #home h1 { font-size: clamp(2.5rem, 7.7vw, 4.5rem); }
+  #home > .grid > div:first-child > p { max-width: 38rem; }
+  #home > .grid > div:last-child > div { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 20px 28px; }
+  #process > .relative { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+  #process > .relative > .grid > div { padding-left: 50px; }
+  #process > .relative > .grid h3 { font-size: 22px; }
+  #team > .relative > .grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px; }
+  #services > .relative > .grid > div:not(:first-child) { padding: 24px 0; }
+  #faq > .relative { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px; }
+}
+@media (max-width: 767px) {
+  :is(#process, #proof, #services, #team, #pricing, #faq) { padding-block: 64px; }
+  :is(#process, #proof, #services, #team, #pricing, #faq) h2 { font-size: 32px; line-height: 1.12; }
+  #process > .relative, #faq > .relative { display: block; }
+  #process > .relative > .grid { margin: 32px 0; }
+  #process > .relative > div:last-child { gap: 24px; }
+  #process > .relative > .grid h3 { font-size: 24px; }
+  #proof > .relative > div:first-child { display: block; margin-bottom: 32px; }
+  #proof > .relative > div:first-child h2 { max-width: 17ch; margin-bottom: 20px; }
+  #proof > .relative > .grid { gap: 28px; max-width: 420px; }
+  #proof > .relative > div:first-child p { max-width: 36rem; }
+  #ranking-videos, #shop-results { margin-top: 48px; }
+  #team > .relative > div:first-child { display: block; margin-bottom: 32px; }
+  #team > .relative > div:first-child h2 { max-width: none; margin-bottom: 20px; }
+  #team img { width: 112px; height: 112px; margin-bottom: 20px; }
+  #team > .relative > .grid { gap: 32px 24px; }
+  #pricing .group\/pricing { gap: 24px; }
+  #pricing .group\/pricing > div > div { padding: 28px; }
+  #faq > .relative > div:first-child { position: static; margin-bottom: 32px; }
+  #faq .faq-item > button > span { font-size: 18px; }
+  #cta { padding-block: 64px 28px; }
+  #cta h2 { max-width: 20ch; }
+}
+@media (max-width: 480px) {
+  body #home { padding-top: 116px; }
+  #home > .grid { row-gap: 24px; }
+  #home h1 { font-size: clamp(2.25rem, 9.8vw, 2.875rem); }
+  #home > .grid > div:first-child > p { font-size: 18px; line-height: 1.6; }
+  #home > .grid > div:last-child > div { flex-direction: column; align-items: stretch; gap: 14px; }
+  #home > .grid > div:last-child > div > button { align-self: flex-start; }
+  #hero-video-card .card-caption { padding: 16px; }
+  #hero-video-card .card-caption > div p:first-child { font-size: 14px; }
+  body #page-one { padding-bottom: 48px; }
+  #team > .relative > .grid { gap: 32px 20px; }
+  #team .font-mono { font-size: 13px; }
+  #team > .relative > .grid > div > div:last-child { font-size: 14px; }
+  #services > .relative > .grid > div:first-child { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .animate-fade-in { opacity: 1; transform: none; }
+}

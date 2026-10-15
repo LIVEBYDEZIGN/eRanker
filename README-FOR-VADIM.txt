@@ -1,81 +1,47 @@
-APPROVED WEBSITE RELEASE, OCTOBER 2, 2026
+eRanker approved website | 15 October 2026
 
-The approved website and all assets are already on main at f935960.
-The current entry file is index.html. No build command is required for this
-static release. Keep assets/, social proof assets/, tools/, privacy.html and
-terms.html together with index.html.
+This ZIP contains the complete static site with Ion's accepted design and copy.
+Use index.html from THIS ZIP. Do not use an older preview or October 2 ZIP.
 
-Publishing from the existing owner's GitHub account:
-  Merge this documentation update into main using "Create a merge commit"
-  from LIVEBYDEZIGN. This creates a new owner-made commit containing the
-  approved website already on main, without changing the website itself.
-  If the deployment is held only by Netlify's new-contributor restriction,
-  this should trigger the existing owner's automatic deployment.
-  Check the Netlify deploy result and eranker.net before calling it live.
+PUBLISH
+1. Keep the current live deploy available for rollback.
+2. Extract this ZIP. Copy its contents into the root of LIVEBYDEZIGN/eRanker,
+   replacing matching files and retaining the folder structure.
+   index.html must remain at the repository root, not in an extra ZIP folder.
+3. Include the entire assets folder, social proof assets folder, legal pages
+   and tools/scheduler. The hero MP4 is included. No build command is needed.
+4. Commit and push from your own GitHub account, using the existing connected
+   production branch. Confirm the existing Netlify deployment finishes.
+   No new project, account, DNS change or hosting change is needed.
 
-Current local preview:
-  python3 -m http.server 8901
-  then http://localhost:8901/
+WHAT IS INCLUDED
+- Accepted design, existing brand fonts and colors, responsive mobile layout.
+- Dark mode by default. Visitors can switch themes; their choice is remembered.
+- Mobile order: headline, video, short explanation, main action.
+- Muted hero video with poster, play/pause and sound controls.
+- All-listings / multiple-keywords explanation and one-listing trial wording.
+- New Ion portrait, visible proof and expandable additional seller stories.
+- $499 option removed. Ranking Test and Full System remain.
+- Accepted Full System graph and pricing-discussion wording.
+- Existing HubSpot, WhatsApp, $35 checkout, social links and scheduler.
 
-The ZIP contains the complete static site, including the native hero video.
-The live release is identifiable by "Rank your Etsy listings on page 1."
-and the HTML release marker "2026-10-02-approved-website".
+AFTER PUBLICATION
+Open eranker.net in a fresh browser session on desktop and a phone. Check the
+hero video, menu, trial form, proof expansion, FAQ, pricing and legal links.
+The hero ends: "Try it on one listing first."
+Page source contains eranker-release = 2026-10-15-approved-design.
 
-HISTORICAL JULY HANDOFF NOTES (retained below; filename and inventory are old)
+The local audit used simulated form responses; it created no test lead or
+payment. Confirm one authorized end-to-end form submission reaches HubSpot
+and that the WhatsApp handoff opens with the supplied details. Check media
+loading on the live host and an actual iPhone / Facebook browser as well.
 
-eRanker website, handoff build
-Generated 2026-07-20
+ROLLBACK
+Restore the previous successful Netlify deploy, or revert this upload commit.
+The GitHub main baseline observed before packaging was
+3752c593840c6a7887c9b3ad03b42916b79373aa.
+If main has changed since then, preserve those newer changes before upload.
 
-OPEN OVER HTTP, NOT file://  (YouTube embeds throw "Error 153" on a file:// origin):
-    python3 -m http.server 8901
-    then http://localhost:8901/eranker-new%20design.html
-
-TWO LAUNCH BLOCKERS
-  1. Tailwind loads from the CDN (compiles in the browser, warns in console, FOUC, single point of
-     failure). Needs a production/purged build producing one stylesheet.
-  2. Local images under "social proof assets/" (spaces, %20) resolve locally; move to R2 or confirm
-     they resolve on the host, or they 404 in prod.
-
-PAYMENT LINKS (live, verified 2026-07-15)
-  $35  "Test My Listing" -> 2-step form -> HubSpot -> payments-na1.hubspot.com/payments/qWyhzjgTVKqjxGQ
-  $499 "Start Monthly"   -> straight to  payments-na1.hubspot.com/payments/DNQqTbKMYZY
-  Every other CTA opens the form and ends at WhatsApp (deliberate: the trial is free for 2,000+-sales
-  shops and only a human can check that, so those buttons must never hit a paywall).
-
-TWO THINGS THAT LOOK LIKE BUGS AND ARE NOT
-  - The <style> rule near line 128 deliberately overrides Tailwind text sizes on <p>/<li>/<h3> in a
-    <section> (larger type for a 30+ audience). Intentional; reasoning is written above the rule.
-  - The trailing semicolon on window.openAuditModal is load-bearing: without it the form silently
-    breaks after one submission (no console error).
-
-REMOTE DEPENDENCIES (not in this zip, already hosted)
-  cdn.shopify.com
-  cdn.tailwindcss.com
-  code.iconify.design
-  fonts.googleapis.com
-  fonts.gstatic.com
-  pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev
-  www.fiverr.com
-  www.youtube-nocookie.com
-  www.youtube.com
-
-FILES (19)
-  assets/etsy_cha_ching.mp3
-  eranker-new design.html
-  privacy.html
-  social proof assets/team/dennis.jpg
-  social proof assets/team/ion.jpg
-  social proof assets/team/laura.jpg
-  social proof assets/team/vince.jpg
-  social proof assets/web/IMG_7732.jpeg
-  social proof assets/web/IMG_7733.jpeg
-  social proof assets/web/IMG_7734.jpeg
-  social proof assets/web/IMG_7735.jpeg
-  social proof assets/web/IMG_7736.jpeg
-  social proof assets/web/IMG_7737.jpeg
-  social proof assets/web/IMG_7738.jpeg
-  social proof assets/web/IMG_7739.jpeg
-  social proof assets/web/IMG_7741.jpeg
-  social proof assets/web/IMG_7742.jpeg
-  social proof assets/web/fiverr-profile.jpg
-  terms.html
+This is a static site. Existing third-party fonts, icons, Tailwind CDN,
+YouTube proof embeds and remotely hosted images remain as before.
+Do not upload internal preview, review, verification or archive directories.

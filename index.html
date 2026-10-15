@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" id="html-root">
+<html lang="en" class="scroll-smooth dark" id="html-root">
 
 <head>
+    <script>
+        // Dark is the default. Restore an explicit light choice before paint.
+        try {
+            if (localStorage.getItem('theme') === 'light') document.documentElement.classList.remove('dark');
+        } catch (_) { /* Dark still works when browser storage is unavailable. */ }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rank your Etsy listing on page 1 for the keyword you choose, usually within 7 days. Test it on one listing first. 224+ reviews, 4.9/5 on Fiverr.">
-    <title>eRanker | Rank. Sell. Scale.</title>
+    <meta name="description" content="Your software to rank and keep all your listings on page 1. Each listing, dozens of keywords. Try it on one listing first.">
+    <title>eRanker | Rank your Etsy listings on page 1</title>
     <link rel="icon" type="image/png" href="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/Untitled-1.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="eRanker | Page 1 in 7 Days">
-    <meta property="og:description" content="Rank your Etsy listing on page 1 for the keyword you choose, usually within 7 days. Test it on one listing first.">
+    <meta property="og:title" content="eRanker | Rank your Etsy listings on page 1">
+    <meta property="og:description" content="Your software to rank and keep all your listings on page 1. Each listing, dozens of keywords. Try it on one listing first.">
     <meta property="og:image" content="https://pub-dabf66908c8d4b128d4f88908ebce83a.r2.dev/Untitled-1.png">
     <!-- Meta Pixel + Microsoft Clarity (ported from the live site; guarded so local preview doesn't pollute data) -->
     <script>
@@ -785,11 +791,13 @@
     <link rel="stylesheet" href="assets/page-one/site-ux.css">
     <script src="assets/page-one/page-one.js" defer></script>
     <link rel="stylesheet" href="assets/page-one/journey.css?v=8ebed7f709">
-    <meta name="eranker-release" content="2026-10-02-approved-website">
+    <meta name="eranker-release" content="2026-10-15-approved-design">
+<link rel="stylesheet" href="assets/design-pass.css?v=9a3e65635da0">
 </head>
 
 <body data-journey="shorter"
     class="antialiased selection:bg-orange-500/30 font-sans text-slate-600 dark:text-slate-400 bg-white dark:bg-[#020204]">
+<a class="pass-skip-link" href="#home">Skip to content</a>
     <!-- GLOBAL VISUAL FX LAYER (Pointer Events None) -->
     <div
         class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-orange-50/60 dark:bg-[#030610] transition-colors duration-500">
@@ -917,7 +925,7 @@
                         <span class="md:hidden">Rank My Product</span>
                         <span class="hidden md:inline">Rank My Product</span>
                     </span>
-                    <span class="btn-text-hover text-orange-600 dark:text-orange-300">
+                    <span aria-hidden="true" class="btn-text-hover text-orange-600 dark:text-orange-300">
                         Rank My Product →
                     </span>
                 </span>
@@ -940,7 +948,7 @@
     </nav>
 
     <!-- Main Hero -->
-<main id="home" class="min-h-screen flex flex-col overflow-hidden z-10 w-full pt-32 pb-20 relative items-center justify-center">
+<main tabindex="-1" id="home" class="min-h-screen flex flex-col overflow-hidden z-10 w-full pt-32 pb-20 relative items-center justify-center">
   <div class="w-full max-w-6xl mx-auto px-6 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-6 items-start">
     <div class="lg:col-span-6 text-center lg:text-left">
       <div
@@ -950,10 +958,10 @@
                         class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-orange-400"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
-                <span>By Etsy sellers, for Etsy sellers</span>
+                <span>Lifetime licence. Unlimited rankings.</span>
             </div>
       <h1 class="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-slate-900 dark:text-white leading-[0.95] bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/80 drop-shadow-sm pb-3 mb-6">Rank your Etsy<br>listings on <span class="whitespace-nowrap">page 1.</span></h1>
-      <p class="text-lg tracking-tight leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0"><span class="lg:block lg:text-balance">eRanker ranks your listings for the keywords you choose.</span> <span class="lg:block lg:mt-2 lg:text-balance">Test it on one listing first, usually within 7 days.</span></p>
+      <p class="text-lg tracking-tight leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0"><span class="lg:block lg:text-balance">Your software to rank and keep all your listings on page 1. Each listing, dozens of keywords.</span> <span class="lg:block lg:mt-2 lg:text-balance">Try it on one listing first.</span></p>
     </div>
     <div class="lg:col-span-6 lg:row-span-2 w-full lg:mt-12"><div id="hero-video-card" data-playback="loading" class="relative min-w-0 rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#050505]/80 shadow-sm flex flex-col">
   <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-[#0a0a0c] block">
@@ -980,7 +988,7 @@
                         class="relative z-10 w-full lg:w-auto block px-4 sm:px-8 py-4 bg-[#ff5702] dark:bg-[#ff5702] text-base font-semibold rounded-[5px] transition-all hover:bg-[#e04e02] dark:hover:bg-[#e04e02] active:bg-[#cc4602] dark:active:bg-[#cc4602] text-white">
                         <span class="btn-content-slide">
                             <span class="btn-text-original">Rank My Product On Page 1</span>
-                            <span class="btn-text-hover text-orange-300">
+                            <span aria-hidden="true" class="btn-text-hover text-orange-300">
                                 Rank My Product On Page 1 →
                             </span>
                         </span>
@@ -1147,7 +1155,7 @@
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="max-w-2xl mb-10">
             <span class="text-xs font-mono text-orange-600 dark:text-orange-400 uppercase tracking-widest mb-4 block">How your trial works</span>
-            <h2 class="text-3xl font-medium tracking-tight text-slate-900 dark:text-white mb-4">See it on <span class="text-orange-600 dark:text-orange-400">your own listing.</span></h2>
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900 dark:text-white mb-4">Try the software on <span class="text-orange-600 dark:text-orange-400">your listing.</span></h2>
             <p class="text-slate-600 dark:text-slate-400">We run the trial for you. Nothing to install, no access to your Etsy account.</p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -1190,7 +1198,7 @@
                     Watch it happen. Then <span class="text-orange-600 dark:text-orange-400">check the receipts.</span>
                 </h2>
                 <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    See what sellers shared with us. Your first step is to test it on your own listing.
+                    Page-1 rankings and shop results over time. Your trial tests the ranking process on one listing.
                 </p>
                 <!-- Third-party rating teased high; the full verify block is chapter 04 below -->
                 <div class="flex justify-center mt-6">
@@ -1303,7 +1311,7 @@
                 <div class="flex-1 h-px bg-slate-200 dark:bg-white/10"></div>
             </div>
 <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
-                Dashboards from shops across Etsy, niche after niche.
+                Whole-shop performance over months. Your trial tests one listing.
             </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
                 <figure
@@ -1623,7 +1631,7 @@
                 </div>
 
                 <!-- Secondary 1: Ranking Analytics -->
-                <div tabindex="0"
+                <div id="ranking-details" tabindex="0"
                     class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#050505]/80 p-8 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:border-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:-translate-y-1 focus:shadow-xl backdrop-blur-sm md:col-span-2 lg:col-span-6">
                     <div class="relative z-10 flex flex-col h-full">
                         <div class="flex items-center gap-4 mb-6">
@@ -1919,7 +1927,7 @@
                     </div>
 
                     <!-- Main Phone Device -->
-                    <div
+                    <div inert aria-hidden="true"
                         class="relative z-10 bg-white rounded-[2.5rem] md:rounded-[3rem] border-[6px] md:border-[8px] border-[#1c1c1e] overflow-hidden w-full aspect-[1/2] max-h-[82vh] shadow-2xl flex flex-col ring-1 ring-black/5 dark:ring-white/10">
                         <div
                             class="absolute top-0 inset-x-0 h-8 bg-transparent z-50 flex justify-center pointer-events-none">
@@ -2236,7 +2244,7 @@
                         system.</div>
                 </div>
                 <div class="text-center p-8 rounded-xl border border-slate-200 dark:border-white/5 bg-white/70 dark:bg-white/[0.02] hover:border-slate-300 dark:hover:bg-white/[0.04] transition-all backdrop-blur-sm shadow-sm dark:shadow-none group">
-                    <img src="social proof assets/team/ion.jpg" alt="Ion"
+                    <img src="social proof assets/team/ion-2026-10.png" alt="Ion" loading="lazy" decoding="async" style="object-position: center 20%;"
                         class="w-28 h-28 rounded-full object-cover mx-auto mb-4 border border-slate-200 dark:border-white/10 shadow-sm transition-transform duration-300 group-hover:scale-105">
                     <div class="text-lg font-semibold text-slate-900 dark:text-white">Ion</div>
                     <div
@@ -2305,7 +2313,7 @@
             </div>
 
             <!-- Parent Grid Container with Uniform Heights -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch group/pricing">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto group/pricing">
                 <!-- TIER 1: STARTER ($35) -->
                 <div tabindex="0"
                     class="group relative flex flex-col h-full rounded-2xl p-[3px] transition-all duration-300 ease-out outline-none bg-gradient-to-br from-[#eaddcf] via-[#a88b70] to-[#785e45] hover:scale-[1.05] focus:scale-[1.05] hover:z-10 focus:z-10 hover:shadow-[0_0_40px_-10px_rgba(168,139,112,0.3)] focus:shadow-[0_0_40px_-10px_rgba(168,139,112,0.3)] md:group-hover/pricing:opacity-90 md:hover:!opacity-100 md:focus:!opacity-100">
@@ -2372,70 +2380,7 @@
                     </div>
                 </div>
 
-                <!-- TIER 2: GROWTH ($199) -->
-                <div tabindex="0"
-                    class="group relative flex flex-col h-full rounded-2xl p-[3px] transition-all duration-300 ease-out outline-none bg-gradient-to-br from-[#ffcba4] via-[#ff5702] to-[#cc4602] hover:scale-[1.05] focus:scale-[1.05] hover:z-10 focus:z-10 hover:shadow-[0_0_40px_-10px_rgba(255,87,2,0.3)] focus:shadow-[0_0_40px_-10px_rgba(255,87,2,0.3)] md:group-hover/pricing:opacity-90 md:hover:!opacity-100 md:focus:!opacity-100">
-                    <div
-                        class="h-full w-full rounded-xl flex flex-col p-8 relative overflow-hidden backdrop-blur-sm bg-gradient-to-b from-[#fff4ed] to-[#ffe6d5] dark:from-[#1a0a00] dark:to-[#0c0a09] ring-1 ring-inset ring-white/40 dark:ring-white/5">
-                        <div class="mb-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3
-                                    class="text-xl font-bold text-[#cc4602] dark:text-[#ffaa6e] flex items-center gap-2">
-                                    Monthly
-                                    <span class="w-2 h-2 rounded-full bg-[#ff5702] shadow-[0_0_8px_#ff5702]"></span>
-                                </h3>
-
-                            </div>
-                            <p class="text-exact text-xs font-medium text-[#cc4602] dark:text-[#ff7a33] min-h-10 leading-snug">
-                                Use eRanker yourself before choosing a lifetime licence.
-                            </p>
-                        </div>
-
-                        <div class="mb-8">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-                                    $499
-                                </span>
-                                <span class="text-lg text-slate-900 dark:text-white font-semibold whitespace-nowrap">
-                                    per month
-                                </span>
-                            </div>
-                            <div class="text-xs text-[#ff5702] dark:text-[#ff7a33] mt-2">
-                                Billed monthly &bull; Cancel anytime
-                            </div>
-                        </div>
-
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check" class="text-[#ff5702] shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>You control the rankings on your own shop</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check" class="text-[#ff5702] shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span><strong class="font-semibold">Rank up to 3 listings at once</strong><span class="block mt-1 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Choose one keyword per listing. Switch to other listings or keywords as you go.</span></span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check" class="text-[#ff5702] shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>Guided setup</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check" class="text-[#ff5702] shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>Direct WhatsApp support</span>
-                            </li>
-                        </ul>
-
-                        <button onclick="openMonthlyCheckout()"
-                            class="w-full py-3 rounded-lg text-white font-medium text-sm transition-all duration-300 shadow-md bg-gradient-to-r from-[#ff5702] to-[#cc4602] hover:from-[#ff7a33] hover:to-[#ff5702] shadow-[#ff5702]/20">
-                            Start Monthly
-                        </button>
-                    </div>
-                </div>
-
-                <!-- TIER 3: FULL SYSTEM -->
+                <!-- TIER 2: FULL SYSTEM -->
                 <div tabindex="0"
                     class="group relative flex flex-col h-full rounded-2xl p-[3px] transition-all duration-300 ease-out outline-none bg-gradient-to-br from-[#fde047] via-[#ca8a04] to-[#854d0e] hover:scale-[1.05] focus:scale-[1.05] hover:z-10 focus:z-10 hover:shadow-[0_0_40px_-10px_rgba(234,179,8,0.3)] focus:shadow-[0_0_40px_-10px_rgba(234,179,8,0.3)] md:group-hover/pricing:opacity-90 md:hover:!opacity-100 md:focus:!opacity-100">
                     <div
@@ -2449,56 +2394,48 @@
                                 <span class="text-[9px] font-bold uppercase tracking-wider whitespace-nowrap text-white bg-yellow-700 border border-yellow-700 px-2 py-0.5 rounded-full">Best value</span>
                             </div>
                             <p class="text-exact text-xs font-medium text-yellow-800/70 dark:text-yellow-200/60 min-h-10 leading-snug">
-                                Your lifetime licence. Unlimited rankings.
+                                Lifetime licence. Unlimited rankings.
                             </p>
                         </div>
 
-                        <div class="mb-8">
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-                                    Let's talk
-                                </span>
+                        <div class="mb-6">
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">
+                                Your own Etsy<br>ranking software.
                             </div>
-                            <div class="text-xs text-yellow-800/60 dark:text-yellow-400/60 mt-2">
-                                Lifetime access &bull; Price discussed with you
-                            </div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mt-3">Choose your listings and keywords. Rank and maintain them on page 1. We help you get started.</p>
                         </div>
 
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check"
-                                    class="text-yellow-600 dark:text-yellow-500 shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>Full eRanker system access</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check"
-                                    class="text-yellow-600 dark:text-yellow-500 shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>Unlimited rankings</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check"
-                                    class="text-yellow-600 dark:text-yellow-500 shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>No per-keyword fees</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
-                                <iconify-icon icon="lucide:check"
-                                    class="text-yellow-600 dark:text-yellow-500 shrink-0 mt-0.5"
-                                    width="16"></iconify-icon>
-                                <span>Direct line to the team</span>
-                            </li>
-                        </ul>
+                        <figure class="mb-6" aria-labelledby="ranking-growth-title">
+                            <figcaption id="ranking-growth-title" class="flex items-baseline justify-between gap-2 mb-2">
+                                <span class="text-xs font-medium text-yellow-800/70 dark:text-yellow-200/60">Page-1 rankings</span>
+                                <span class="text-lg font-bold tracking-tight leading-none text-yellow-800 dark:text-yellow-200">1,000++</span>
+                            </figcaption>
+                            <div class="relative h-32">
+                            <svg class="absolute inset-0 w-full h-full text-yellow-700 dark:text-yellow-400" viewBox="0 0 320 128" preserveAspectRatio="none" role="img" aria-label="Cumulative use of the software, from one ranking to thousands over time. No fixed timeframe.">
+                                <defs>
+                                    <linearGradient id="ranking-growth-fill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="currentColor" stop-opacity="0.2"></stop>
+                                        <stop offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M8 8H310 M8 56H310 M8 104H310" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+                                <path d="M8.00 104.00 L12.72 103.46 L17.44 102.90 L22.16 102.33 L26.88 101.74 L31.59 101.13 L36.31 100.51 L41.03 99.86 L45.75 99.20 L50.47 98.52 L55.19 97.83 L59.91 97.11 L64.62 96.37 L69.34 95.61 L74.06 94.83 L78.78 94.02 L83.50 93.20 L88.22 92.35 L92.94 91.47 L97.66 90.57 L102.38 89.65 L107.09 88.69 L111.81 87.71 L116.53 86.71 L121.25 85.67 L125.97 84.61 L130.69 83.51 L135.41 82.39 L140.12 81.23 L144.84 80.03 L149.56 78.81 L154.28 77.55 L159.00 76.25 L163.72 74.92 L168.44 73.55 L173.16 72.13 L177.88 70.68 L182.59 69.19 L187.31 67.66 L192.03 66.08 L196.75 64.45 L201.47 62.78 L206.19 61.06 L210.91 59.30 L215.62 57.48 L220.34 55.61 L225.06 53.69 L229.78 51.71 L234.50 49.68 L239.22 47.59 L243.94 45.43 L248.66 43.22 L253.38 40.94 L258.09 38.60 L262.81 36.20 L267.53 33.72 L272.25 31.17 L276.97 28.55 L281.69 25.86 L286.41 23.09 L291.12 20.24 L295.84 17.31 L300.56 14.29 L305.28 11.19 L310.00 8.00 V104 H8 Z" fill="url(#ranking-growth-fill)"></path>
+                                <path d="M8.00 104.00 L12.72 103.46 L17.44 102.90 L22.16 102.33 L26.88 101.74 L31.59 101.13 L36.31 100.51 L41.03 99.86 L45.75 99.20 L50.47 98.52 L55.19 97.83 L59.91 97.11 L64.62 96.37 L69.34 95.61 L74.06 94.83 L78.78 94.02 L83.50 93.20 L88.22 92.35 L92.94 91.47 L97.66 90.57 L102.38 89.65 L107.09 88.69 L111.81 87.71 L116.53 86.71 L121.25 85.67 L125.97 84.61 L130.69 83.51 L135.41 82.39 L140.12 81.23 L144.84 80.03 L149.56 78.81 L154.28 77.55 L159.00 76.25 L163.72 74.92 L168.44 73.55 L173.16 72.13 L177.88 70.68 L182.59 69.19 L187.31 67.66 L192.03 66.08 L196.75 64.45 L201.47 62.78 L206.19 61.06 L210.91 59.30 L215.62 57.48 L220.34 55.61 L225.06 53.69 L229.78 51.71 L234.50 49.68 L239.22 47.59 L243.94 45.43 L248.66 43.22 L253.38 40.94 L258.09 38.60 L262.81 36.20 L267.53 33.72 L272.25 31.17 L276.97 28.55 L281.69 25.86 L286.41 23.09 L291.12 20.24 L295.84 17.31 L300.56 14.29 L305.28 11.19 L310.00 8.00" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+                                <path d="M8 109V112 M310 2V0" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+                            </svg>
+                            <span aria-hidden="true" class="absolute w-2 h-2 rounded-full border-2 border-yellow-700 dark:border-yellow-400 bg-[#fefce8] dark:bg-[#422006] -translate-x-1/2 -translate-y-1/2" style="left:2.5%;top:81.25%"></span>
+                            <span aria-hidden="true" class="absolute w-2.5 h-2.5 rounded-full border-2 border-yellow-700 dark:border-yellow-400 bg-[#fefce8] dark:bg-[#422006] -translate-x-1/2 -translate-y-1/2" style="left:96.875%;top:6.25%"></span>
+                            <span class="absolute left-0 bottom-0 text-xs font-medium text-yellow-800/70 dark:text-yellow-200/60">1 ranking</span>
+                            <span class="absolute right-0 bottom-0 text-xs text-yellow-800/70 dark:text-yellow-200/60">Over time</span>
+                            </div>
+                        </figure>
 
-                        <div class="text-[11px] text-yellow-800/70 dark:text-yellow-200/60 leading-snug -mt-4 mb-4">
-                            One ranking proves it. Many grow your shop.
-                        </div>
+                        <div class="text-xs text-yellow-800/70 dark:text-yellow-200/60 mt-auto mb-4">Price options discussed with you during the demo call.</div>
 
-                        <button onclick="openFullSystemChat()"
-                            class="w-full py-3 rounded-lg text-white font-medium text-sm transition-all duration-300 shadow-md bg-gradient-to-r from-yellow-700 to-yellow-800 hover:from-yellow-600 hover:to-yellow-700 shadow-yellow-900/10">
-                            Talk to Us
-                        </button>
+                        <a href="https://wa.me/13057966231?text=Hi%21%20I%27m%20interested%20in%20the%20eRanker%20Full%20System%20%28unlimited%20rankings%29%20for%20my%20shop.%20Can%20we%20talk%3F" target="_blank" rel="noopener noreferrer" onclick="trackFb('Contact')"
+                            class="block text-center w-full py-3 rounded-lg text-white font-medium text-sm transition-all duration-300 shadow-md bg-gradient-to-r from-yellow-700 to-yellow-800 hover:from-yellow-600 hover:to-yellow-700 shadow-yellow-900/10">
+                            Talk to us on WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2612,8 +2549,8 @@
                         <p class="pb-6 text-slate-800 dark:text-slate-200 leading-relaxed">
                             The test ranking usually lands within 7 days. And to set expectations honestly: one ranking
                             is proof of the mechanics, not a revenue plan. Revenue grows as you stack rankings across
-                            more keywords and more listings, which is exactly what the monthly and full-system paths
-                            are built for.
+                            more keywords and more listings, which is exactly what the Full System licence
+                            is built for.
                         </p>
                     </div>
                 </div>
@@ -2686,7 +2623,7 @@
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0 faq-answer">
                         <p class="pb-6 text-slate-800 dark:text-slate-200 leading-relaxed">
-                            The ranking test is $35 (free for shops with 2,000+ lifetime sales). After your test, we can discuss a lifetime software licence for your shop. Monthly access is a separate subscription at $499 per month, billed every month until cancelled.
+                            The ranking test is $35 (free for shops with 2,000+ lifetime sales). After your test, we can discuss a lifetime software licence for your shop.
                         </p>
                     </div>
                 </div>
@@ -2718,7 +2655,7 @@
                     </button>
                     <div class="overflow-hidden transition-all duration-300 max-h-0 faq-answer">
                         <p class="pb-6 text-slate-800 dark:text-slate-200 leading-relaxed">
-                    Your trial covers one listing and one keyword. The Full System licence includes unlimited rankings, so you can work across more listings and keywords. Monthly access has its own ranking allowance.
+                    Your trial covers one listing and one keyword. The Full System licence includes unlimited rankings, so you can work across more listings and keywords.
                 </p>
                     </div>
                 </div>
@@ -2982,7 +2919,7 @@
                                 IMPORTANT NEXT STEP:
                             </p>
                             <p class="text-base font-semibold text-slate-900 dark:text-white">
-                                Click the button below to instantly check if your shop qualifies for a FREE trial.
+                                Open WhatsApp and tap Send. Laura will check whether your shop qualifies for a free trial.
                             </p>
                         </div>
                         <!-- FORM-HARDENING FLAG #1 (2026-07-13): real anchor (not JS window.open) survives the
@@ -3031,21 +2968,11 @@
         const themeBtn = document.getElementById('theme-toggle');
         const html = document.getElementById('html-root');
 
-        // Default theme is LIGHT for everyone; dark only if the user explicitly toggled it
-        if (localStorage.theme === 'dark') {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-
+        // Initial theme is resolved in the head before the page paints.
         themeBtn.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                html.classList.add('dark');
-                localStorage.theme = 'dark';
-            }
+            const isDark = html.classList.toggle('dark');
+            try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); }
+            catch (_) { /* The toggle also works without persistent storage. */ }
         });
 
         // --- 2. SPOTLIGHT & MOUSE TRACKING ---
@@ -3112,7 +3039,7 @@
                 modalContent.classList.remove('scale-95', 'opacity-0');
                 modalContent.classList.add('scale-100', 'opacity-100');
                 var firstField = document.getElementById('f-listing');
-                if (firstField) { var st = firstField.closest('.form-step'); if (st && !st.classList.contains('hidden')) firstField.focus(); }
+                if (window.matchMedia('(max-width: 767px)').matches) { var title = document.getElementById('audit-modal-title'); title.tabIndex = -1; title.focus({preventScroll: true}); } else if (firstField) { var st = firstField.closest('.form-step'); if (st && !st.classList.contains('hidden')) firstField.focus(); }
             }, 10);
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
@@ -3169,20 +3096,10 @@
         // VERIFIED LIVE 2026-07-15 by loading the page: "ONE KEYWORD RANK", US$35.00. The checkout
         // itself instructs "Please use the same email address as the one provided in the submission
         // form", which is exactly the merge this flow depends on (HubSpot keys contacts on email).
-        // NOTE: this checkout collects email + name-on-card ONLY, no WhatsApp number (unlike the $499
-        // link, which collects Email + First name + WhatsApp Phone Number). That is WHY the $35 path
+        // NOTE: this checkout collects email + name-on-card ONLY, no WhatsApp number. The $35 path
         // keeps the full two-step form: it is the only place the number is captured, and the trial is
         // delivered over WhatsApp. Do not "simplify" step 2 away again.
         const RANKING_TEST_PAYMENT_URL = 'https://payments-na1.hubspot.com/payments/qWyhzjgTVKqjxGQ?referrer=PAYMENT_LINK';
-
-        /* $499 MONTHLY: straight to checkout, NO form.
-         * VERIFIED LIVE 2026-07-15: "$499 Monthly Subscription", US$499.00/month, uncapped (a true
-         * subscription, so "Cancel anytime" is honest), and it collects Email + First name + WhatsApp
-         * Phone Number itself.
-         * WHY NO FORM, unlike $35: the $35 buys ONE listing on ONE keyword, so the listing and keywords
-         * must be captured before payment. The $499 is an ongoing subscription over the whole shop,
-         * so there is nothing to collect up front. Empty string = fall back to the form. */
-        const MONTHLY_PAYMENT_URL = 'https://payments-na1.hubspot.com/payments/DNQqTbKMYZY?referrer=PAYMENT_LINK';
 
         /** 'qualify' = form -> WhatsApp (every button). 'buy35' = form -> $35 checkout. */
         let modalMode = 'qualify';
@@ -3448,15 +3365,6 @@
             window.open('https://wa.me/13057966231?text=' + encodeURIComponent(msg), '_blank');
         }
 
-        /** Entry point for the $499 pricing button. Straight to checkout, no form: the subscription
-         *  needs no listing or keywords up front, and its checkout collects name/email/WhatsApp itself.
-         *  Falls back to the form if no link is set, so the button is never dead. */
-        function openMonthlyCheckout() {
-            if (!MONTHLY_PAYMENT_URL) { openAuditModal(); return; }
-            trackFb('InitiateCheckout', { value: 499, currency: 'USD' });
-            window.location.href = MONTHLY_PAYMENT_URL;
-        }
-
         /** Entry point for the $35 pricing button. Falls back to the qualify flow when no link is set.
          *  ORDER IS LOAD-BEARING: openAuditModal() is wrapped and calls resetLeadForm(), which sets
          *  modalMode back to 'qualify'. So the mode MUST be set AFTER the open, then re-rendered.
@@ -3562,7 +3470,7 @@
         const chaBtn = document.getElementById('chaching-sound-btn');
         const chaLabel = document.getElementById('chaching-sound-label');
         const chaSection = document.getElementById('app');
-        let chaEnabled = localStorage.getItem('chaching-sound') !== 'off';
+        let chaEnabled = false;
         let chaUnlocked = false;
         let chaCtx = null;
         let chaMaster = null;
@@ -3662,10 +3570,10 @@
             const icon = chaBtn.querySelector('iconify-icon');
             if (!chaEnabled) {
                 if (icon) icon.setAttribute('icon', 'lucide:volume-x');
-                chaLabel.textContent = 'Sound off';
+                chaLabel.textContent = 'Hear the Cha-Ching';
             } else {
                 if (icon) icon.setAttribute('icon', 'lucide:volume-2');
-                chaLabel.textContent = playedOnce ? 'Sound on' : 'Hear the Cha-Ching';
+                chaLabel.textContent = playedOnce ? 'Mute sound' : 'Hear the Cha-Ching';
             }
         }
 
@@ -3693,14 +3601,7 @@
             window.addEventListener('scroll', chaRequestTick, { passive: true });
             window.addEventListener('resize', chaRequestTick, { passive: true });
             document.addEventListener('visibilitychange', () => { if (document.hidden) chaStopLoop(); });
-            // ANY first click/tap anywhere on the page unlocks audio for the
-            // scroll-driven dings (the pill is not required).
-            document.addEventListener('pointerdown', function chaGestureUnlock() {
-                chaEnsureCtx();
-                if (chaCtx && chaCtx.state === 'suspended') chaCtx.resume().catch(() => { });
-                chaLoadBuffer();
-                chaRequestTick();
-            }, { once: true, capture: true });
+            // Sound starts only from the dedicated sound button.
             chaRequestTick();
         }
     </script>
