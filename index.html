@@ -40,6 +40,23 @@
             })(window, document, "clarity", "script", "tdx84puqbg");
         })();
     </script>
+    <!-- Google Ads tag (AW-18518626177) + Reddit Pixel (a2_jv00dtxuyo8i), same local guard as above -->
+    <script>
+        (function () {
+            var IS_LOCAL = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+            if (IS_LOCAL) return;
+            var g = document.createElement('script'); g.async = true;
+            g.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18518626177';
+            document.head.appendChild(g);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+            gtag('js', new Date());
+            gtag('config', 'AW-18518626177', { allow_enhanced_conversions: true });
+            !function (w, d) { if (!w.rdt) { var p = w.rdt = function () { p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments) }; p.callQueue = []; var t = d.createElement("script"); t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0; var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s) } }(window, document);
+            rdt('init', 'a2_jv00dtxuyo8i', { useDecimalCurrencyValues: true });
+            rdt('track', 'PageVisit');
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -890,6 +907,10 @@
                 class="px-4 py-1.5 text-xs font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">
                 Results
             </a>
+            <a href="reviews.html"
+                class="px-4 py-1.5 text-xs font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">
+                Reviews
+            </a>
             <a href="#faq"
                 class="px-4 py-1.5 text-xs font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">
                 FAQ
@@ -941,6 +962,7 @@
             <a href="#process" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">How it works</a>
             <a href="#services" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">Why it works</a>
             <a href="#proof" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">Results</a>
+            <a href="reviews.html" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">Reviews</a>
             <a href="#faq" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">FAQ</a>
             <a href="#pricing" class="mobile-menu-link px-4 py-3 text-sm font-medium rounded-full transition-all text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5">Pricing</a>
         </div>
@@ -1198,7 +1220,7 @@
                     Watch it happen. Then <span class="text-orange-600 dark:text-orange-400">check the receipts.</span>
                 </h2>
                 <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    Page-1 rankings and shop results over time. Your trial tests the ranking process on one listing.
+                    See page-1 rankings and shop results from lifetime license users after thousands of rankings. Your trial proves the ranking: one listing, one keyword, page 1.
                 </p>
                 <!-- Third-party rating teased high; the full verify block is chapter 04 below -->
                 <div class="flex justify-center mt-6">
@@ -1246,6 +1268,7 @@
                     Verify all 224+ reviews on Fiverr
                     <iconify-icon class="shrink-0" icon="lucide:external-link" width="16"></iconify-icon>
                 </a>
+                <p class="mt-4 text-sm text-slate-500 dark:text-slate-400"><a href="reviews.html" class="underline hover:text-orange-500">All reviews, including the bad ones, and our answers</a></p>
             </div>
             <div id="ranking-videos" class="mt-16"><div class="flex items-center gap-3 mb-6 mt-4">
                 <span class="text-xs font-mono text-orange-600 dark:text-orange-400 uppercase tracking-widest">
@@ -2739,6 +2762,9 @@
                     </span>
                 </div>
                 <div class="flex gap-4">
+                    <a href="reviews.html" class="hover:text-slate-900 dark:hover:text-white">
+                        Reviews
+                    </a>
                     <a href="privacy.html" class="hover:text-slate-900 dark:hover:text-white">
                         Privacy Policy
                     </a>
@@ -3112,6 +3138,36 @@
 
         function trackFb(eventName, params) {
             if (window.fbq) { params ? fbq('track', eventName, params) : fbq('track', eventName); }
+            // Mirror Contact / InitiateCheckout to Reddit + Google; Lead goes through trackAdsLead (with matching).
+            if (eventName === 'Lead') return;
+            try {
+                if (window.rdt) rdt('track', 'Custom', Object.assign({ customEventName: eventName }, params || {}));
+                // beacon: checkout and WhatsApp can leave the page right after this call
+                if (window.gtag && GADS_SEND_TO[eventName]) gtag('event', 'conversion', Object.assign({ send_to: GADS_SEND_TO[eventName], transport_type: 'beacon' }, params || {}));
+            } catch (_) { }
+        }
+
+        // Google Ads conversion "Submit lead form" (primary), Goals > Conversions.
+        const GADS_LEAD_SEND_TO = 'AW-18518626177/XstTCLiXh6AdEIGfr_5E';
+        // Secondary conversions, fired from trackFb next to the Meta events of the same name.
+        const GADS_SEND_TO = {
+            Contact: 'AW-18518626177/8myjCMmuh6AdEIGfr_5E',          // Contact-WhatsApp
+            InitiateCheckout: 'AW-18518626177/_c5YCOGgh6AdEIGfr_5E'  // Begin checkout
+        };
+
+        // Google Ads (enhanced conversions) + Reddit (advanced matching) Lead. Wrapped so a tracking
+        // failure can never touch the HubSpot / WhatsApp / checkout flow.
+        function trackAdsLead(email, whatsapp) {
+            try {
+                let phone = (whatsapp || '').replace(/[^\d+]/g, '').replace(/^00/, '+');
+                if (phone && phone[0] !== '+') phone = '';
+                const id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now());
+                if (window.gtag) {
+                    gtag('set', 'user_data', phone ? { email: email, phone_number: phone } : { email: email });
+                    if (GADS_LEAD_SEND_TO) gtag('event', 'conversion', { send_to: GADS_LEAD_SEND_TO, value: 35, currency: 'USD', transaction_id: id });
+                }
+                if (window.rdt) rdt('track', 'Lead', { value: 35, currency: 'USD', conversionId: id, email: email, phoneNumber: phone || undefined });
+            } catch (e) { console.error('ads tracking failed:', e); }
         }
 
         function fieldVal(id) { return (document.getElementById(id).value || '').trim(); }
@@ -3303,6 +3359,7 @@
                 if (!response.ok) throw new Error('Submission failed');
                 saveConfirmed = true;
                 trackFb('Lead', { value: 35, currency: 'USD' });
+                trackAdsLead(leadEmail, fieldVal('f-wa'));
             } catch (err) {
                 // Do not strand the lead. Qualify path: WhatsApp still carries every field.
                 // Buy path: let them pay anyway. A blocked HubSpot loses the keywords (Laura can
