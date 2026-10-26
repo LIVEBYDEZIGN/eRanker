@@ -1,0 +1,946 @@
+[
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Let’s rank your listing.",
+    "height": 568,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 254
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 142
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Let’s rank your listing.",
+    "height": 800,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 294
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 182
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Let’s rank your listing.",
+    "height": 844,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 316
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 204
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Let’s rank your listing.",
+    "height": 932,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 356
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 244
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Let’s rank your listing.",
+    "height": 1024,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 310
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 310
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 310
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 310
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 279
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 279
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 167
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Let’s rank your listing.",
+    "height": 768,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 430
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 430
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 430
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 430
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 399
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 399
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 287
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Let’s rank your listing.",
+    "height": 900,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 409
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 409
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 297
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Let’s rank your listing.",
+    "height": 1080,
+    "inputs": [
+      {
+        "id": "listing",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword1",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword2",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "keyword3",
+        "outside": false,
+        "width": 440
+      },
+      {
+        "id": "firstname",
+        "outside": false,
+        "width": 409
+      },
+      {
+        "id": "email",
+        "outside": false,
+        "width": 409
+      },
+      {
+        "id": "phone-country",
+        "outside": false,
+        "width": 102
+      },
+      {
+        "id": "whatsapp",
+        "outside": false,
+        "width": 297
+      }
+    ],
+    "overflow": false,
+    "path": "/checkout.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Rank your Etsy listings on page 1.",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/index.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Results from software users.",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Results from software users.",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Results from software users.",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Results from software users.",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Results from software users.",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Results from software users.",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Results from software users.",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Results from software users.",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/results.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Opening WhatsApp…",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Opening WhatsApp…",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Opening WhatsApp…",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Opening WhatsApp…",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Opening WhatsApp…",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Opening WhatsApp…",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Opening WhatsApp…",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Opening WhatsApp…",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/payment-complete.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Terms of Service",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Terms of Service",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Terms of Service",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Terms of Service",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Terms of Service",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Terms of Service",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Terms of Service",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Terms of Service",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/terms.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "Privacy Policy",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "Privacy Policy",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "Privacy Policy",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "Privacy Policy",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "Privacy Policy",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "Privacy Policy",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "Privacy Policy",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "Privacy Policy",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/privacy.html",
+    "simulatedCopy": false,
+    "width": 1920
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 320,
+    "h1": "The 37-second overview",
+    "height": 568,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 320
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 360,
+    "h1": "The 37-second overview",
+    "height": 800,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 360
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 390,
+    "h1": "The 37-second overview",
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 390
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 430,
+    "h1": "The 37-second overview",
+    "height": 932,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 430
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 768,
+    "h1": "The 37-second overview",
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 768
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1024,
+    "h1": "The 37-second overview",
+    "height": 768,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 1024
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1440,
+    "h1": "The 37-second overview",
+    "height": 900,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 1440
+  },
+  {
+    "brokenLoadedImages": [],
+    "documentWidth": 1920,
+    "h1": "The 37-second overview",
+    "height": 1080,
+    "inputs": [],
+    "overflow": false,
+    "path": "/assets/overview-transcript.html",
+    "simulatedCopy": false,
+    "width": 1920
+  }
+]

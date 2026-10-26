@@ -1,0 +1,16 @@
+{
+  "archive": "eRanker-ready-for-Vadim-intake-first-2026-10-26.zip",
+  "bytes": 5684774,
+  "files": 42,
+  "sha256": "2346ae7abe4850e22ebdf0a69fa22c753326e8a1ddc2635258427e924a43070e",
+  "source_equality": true,
+  "status": "ready_for_vadim_publication",
+  "payment": "native HubSpot checkout 10567449; no simulation",
+  "test_fixtures_in_release": false,
+  "dns_instructions_included": true,
+  "production_callback_change_required": true,
+  "html_pages_with_gtm": 9,
+  "local_references_checked": 70,
+  "responsive_page_size_combinations": 56,
+  "zip_crc_and_extracted_hashes": "passed"
+}

@@ -1,0 +1,7 @@
+{
+  "completion": "simulated, no charge",
+  "observed": {
+    "text": true,
+    "url": "https://api.whatsapp.com/send/?phone=13057966231&text=Hi+Laura%2C+here+are+the+details+for+my+ranking+test.%0A%0Aname%3A+Ion%0Alisting+id%3A+https%3A%2F%2Fwww.etsy.com%2Flisting%2F123456789%0Akeyword+1%3A+Website+test%2C+do+not+process%0Akeyword+2%3A+Checkout+and+intake+test%0Akeyword+3%3A+HubSpot+WhatsApp+test%0Aemail%3A+test2000%40gmail.com%0Awhatsapp%3A+%2B37378328893&type=phone_number&app_absent=0"
+  }
+}

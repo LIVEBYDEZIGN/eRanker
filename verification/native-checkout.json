@@ -1,0 +1,10 @@
+{
+  "asksFirstName": false,
+  "securityNotice": true,
+  "url": "https://payments-na1.hubspot.com/payments/purchase/hscs_mqAeaheH2KQj8LsDKQE1VmelUdbg52KRwbvMciG7mwB2Y0nq0JzRcJ1odm75cukz?referrer=PAYMENT_LINK_FORM",
+  "emailPrefillVerifiedVisually": true,
+  "emailShown": "test2000@gmail.com",
+  "domValueRedacted": true,
+  "screenshot": "native-checkout.png",
+  "chargedPayment": false
+}

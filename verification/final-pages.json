@@ -1,0 +1,58 @@
+[
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/index.html",
+    "width": 320
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/results.html",
+    "width": 320
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/index.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/results.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/index.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/results.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/index.html",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "cta": true,
+    "overflow": false,
+    "page": "/results.html",
+    "width": 1440
+  }
+]

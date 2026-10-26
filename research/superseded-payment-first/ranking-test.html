@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#020204">
+  <title>Your ranking test | eRanker</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ranking-test.css?v=2026-10-26-paid-test">
+  <script type="module" src="ranking-test.mjs?v=2026-10-26-paid-test"></script>
+  <meta name="eranker-release" content="2026-10-26-paid-test">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to form</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="eRanker home"><img src="assets/logo.png" width="40" height="40" alt=""><span translate="no">eRanker<small>Etsy rankings</small></span></a>
+      <span class="setup-header">Your ranking test</span>
+    </div>
+  </header>
+  <main id="main" class="container setup" tabindex="-1">
+    <ol class="setup-progress" aria-label="Test setup">
+      <li><span>01</span> Pay $35</li>
+      <li aria-current="step"><span>02</span> Your listing</li>
+      <li><span>03</span> WhatsApp</li>
+    </ol>
+    <div id="checkout-confirmation" class="checkout-confirmation" role="status" hidden>
+      <strong>Payment complete.</strong> Now add your listing below.
+      <small>Your receipt is sent by email. Keep it for your records.</small>
+    </div>
+    <section id="setup-entry" aria-labelledby="setup-title">
+      <div class="setup-intro">
+        <p class="eyebrow">Let’s get your test started</p>
+        <h1 id="setup-title">Which listing should we rank?</h1>
+        <p>Add your listing and 3 keyword options. Laura will confirm one for your test.</p>
+      </div>
+      <form id="ranking-form" novalidate>
+        <div class="setup-columns">
+          <fieldset class="setup-fields">
+            <legend>Your Etsy listing</legend>
+            <div class="setup-field">
+              <label for="listing">Listing link</label>
+              <input id="listing" name="listing" type="text" inputmode="url" autocapitalize="none" spellcheck="false" autocomplete="off" placeholder="e.g. etsy.com/listing/123456789" maxlength="2000" required aria-describedby="listing-error">
+              <p class="field-error" id="listing-error" hidden></p>
+            </div>
+            <p class="field-hint keyword-hint" id="keywords-help">Choose searches a buyer would use to find this listing.</p>
+            <div class="setup-field"><label for="keyword1">Keyword option 1</label><input id="keyword1" name="keyword1" type="text" autocomplete="off" placeholder="e.g. personalized necklace" maxlength="200" required aria-describedby="keywords-help keyword1-error"><p class="field-error" id="keyword1-error" hidden></p></div>
+            <div class="setup-field"><label for="keyword2">Keyword option 2</label><input id="keyword2" name="keyword2" type="text" autocomplete="off" placeholder="e.g. gold name necklace" maxlength="200" required aria-describedby="keyword2-error"><p class="field-error" id="keyword2-error" hidden></p></div>
+            <div class="setup-field"><label for="keyword3">Keyword option 3</label><input id="keyword3" name="keyword3" type="text" autocomplete="off" placeholder="e.g. gift for mom" maxlength="200" required aria-describedby="keyword3-error"><p class="field-error" id="keyword3-error" hidden></p></div>
+          </fieldset>
+          <fieldset class="setup-fields setup-contact">
+            <legend>Your contact details</legend>
+            <div class="setup-field" id="email-field"><label for="email" id="email-label">Email used at checkout</label><input id="email" name="email" type="email" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="254" required aria-describedby="email-help email-error"><p id="checkout-email-display" class="checkout-email-display" hidden></p><p class="field-hint" id="email-help">Use the email from your payment receipt.</p><p class="field-error" id="email-error" hidden></p></div>
+            <div class="setup-field"><label for="phone-country">Country for your WhatsApp number</label><select id="phone-country" name="phone-country" required aria-describedby="phone-country-help phone-country-error"><option value="">Choose your country</option></select><p class="field-hint" id="phone-country-help">We add your country code for you.</p><p class="field-error" id="phone-country-error" hidden></p></div>
+            <div class="setup-field"><label for="whatsapp">Your WhatsApp number</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="Your phone number" maxlength="40" required aria-describedby="whatsapp-help phone-readback whatsapp-error"><p class="field-hint" id="whatsapp-help">Type your usual number, starting with 0 if it has one.</p><p id="phone-readback" class="field-hint phone-readback" role="status" aria-live="polite"></p><p class="field-error" id="whatsapp-error" hidden></p></div>
+            <div class="setup-person person"><img src="assets/laura.jpg" width="44" height="44" alt="Laura"><span>Laura<small>Your ranking manager</small></span></div>
+          </fieldset>
+        </div>
+        <div class="setup-action">
+          <p id="save-status" class="save-status" role="status" aria-live="polite"></p>
+          <button id="submit-details" class="button primary" type="submit" disabled>Send details &amp; open WhatsApp <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+          <p class="field-hint">Your message will be ready. Tap <strong>Send</strong> in WhatsApp so Laura receives it.</p>
+          <p class="setup-privacy">Your details are used to run your test. <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy policy</a></p>
+          <noscript><p>Please enable JavaScript to send your details, or <a href="https://wa.me/13057966231" rel="noreferrer">contact Laura on WhatsApp</a> with your listing and keyword options.</p></noscript>
+        </div>
+      </form>
+    </section>
+    <section id="handoff" class="handoff" aria-labelledby="handoff-title" hidden>
+      <div class="person"><img src="assets/laura.jpg" width="44" height="44" alt="Laura"><span>Laura<small>Your ranking manager</small></span></div>
+      <h1 id="handoff-title" tabindex="-1">Send your message to Laura.</h1>
+      <p id="handoff-description"></p>
+      <a id="whatsapp-link" class="button primary" rel="noreferrer" hidden>Open WhatsApp</a>
+      <details id="message-details"><summary>Your prepared message</summary><pre id="message-preview"></pre></details>
+      <button id="return-to-form" class="text-link" type="button">Back to your details</button>
+    </section>
+  </main>
+</body>
+</html>

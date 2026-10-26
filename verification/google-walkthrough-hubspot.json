@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-26T17:00:55.607Z",
+  "portalId": "48846766",
+  "previewUrl": "https://eranker-paid-flow-check-20261026.eranker.chatgpt.site",
+  "payment": "simulated; no charge",
+  "exactEmailMatchCount": 1,
+  "operation": "updated existing authorized test contact",
+  "contact": {
+    "id": 257843943044,
+    "properties": {
+      "firstname": "Ion",
+      "hs_whatsapp_phone_number": "+37378328893",
+      "lastmodifieddate": "2026-10-26T17:00:55.607Z",
+      "hs_full_name_or_email": "Ion",
+      "keyword_3": "Automatic WhatsApp check 26 October",
+      "hs_object_id": "257843943044",
+      "keyword_2": "Checkout and intake test",
+      "createdate": "2026-10-26T12:12:05.481Z",
+      "etsy_listing_url": "https://www.etsy.com/listing/123456789",
+      "target_keyword": "Website test, do not process",
+      "email": "test2000@gmail.com"
+    },
+    "displayName": "Ion"
+  },
+  "contactUrl": "https://app.hubspot.com/contacts/48846766/record/0-1/257843943044?utm_source=app_53146649_mcp&utm_medium=ai_agent&utm_campaign=search",
+  "whatsapp": "Automatic navigation observed with the submitted data; Send not performed",
+  "deployment": {
+    "id": "appgdep_6adf862bea7c81918ed7c46c59aad1f8",
+    "project_id": "appgprj_6adf392f02688191be996bf68c73f7ac",
+    "title": "eRanker paid flow verification",
+    "version_id": "appgprj_6adf392f02688191be996bf68c73f7ac~appgver_9841a4d1d7588191abb592ebf1e167cb",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://eranker-paid-flow-check-20261026.eranker.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6adf392f02688191be996bf68c73f7ac",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-26T16:56:30.600578+00:00"
+  }
+}

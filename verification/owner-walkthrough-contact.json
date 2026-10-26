@@ -1,0 +1,25 @@
+{
+  "purpose": "Read-only lookup after Ion's accepted walkthrough; no contact correction",
+  "results": [
+    {
+      "id": 257986054151,
+      "properties": {
+        "firstname": "Ion",
+        "hs_whatsapp_phone_number": "+37378328893",
+        "lastmodifieddate": "2026-10-26T17:15:32.538Z",
+        "hs_full_name_or_email": "Ion",
+        "keyword_3": "kjhik",
+        "hs_object_id": "257986054151",
+        "keyword_2": "0k 2",
+        "createdate": "2026-10-26T17:12:35.946Z",
+        "etsy_listing_url": "https://www.etsy.com/listing/923123231",
+        "target_keyword": "ok",
+        "email": "pasledniaiabitva@gmai.com"
+      },
+      "displayName": "Ion"
+    }
+  ],
+  "total": 1,
+  "urlTemplate": "https://app.hubspot.com/contacts/48846766/record/0-1/{id}?utm_source=app_53146649_mcp&utm_medium=ai_agent&utm_campaign=search",
+  "offset": 1
+}

@@ -1,0 +1,41 @@
+✔ private and localhost previews send no analytics (2.238875ms)
+✔ one GA4 page view, correct IDs and no duplicate bootstrap (5.492875ms)
+✔ GA4 mirrors Meta intent, lead and contact without personal data (3.377708ms)
+✔ navigation runs once and still runs with blocked Google scripts (0.519958ms)
+✔ canonical listing, all seven contact properties and native payment association (2.966292ms)
+✔ reject missing listing (0.360792ms)
+✔ reject missing keyword1 (0.235625ms)
+✔ reject missing keyword2 (0.189125ms)
+✔ reject missing keyword3 (0.155833ms)
+✔ reject missing firstname (0.738375ms)
+✔ reject missing email (0.160583ms)
+✔ reject missing whatsapp (0.065625ms)
+✔ reject invalid listing https://etsy.com.attacker.test/listing/123456789 (0.175625ms)
+✔ reject invalid listing https://www.etsy.com@attacker.test/listing/123456789 (0.186958ms)
+✔ reject invalid listing https://www.etsy.com/shop/Example (0.137459ms)
+✔ reject invalid listing javascript:alert(1) (0.11875ms)
+✔ normalize Moldova 78328893 (0.126625ms)
+✔ normalize Moldova 078328893 (0.1625ms)
+✔ normalize Moldova +37378328893 (0.18725ms)
+✔ normalize Moldova 0037378328893 (0.13675ms)
+✔ normalize Moldova 37378328893 (0.211041ms)
+✔ normalize US (0.661291ms)
+✔ normalize GB (1.833625ms)
+✔ normalize IT (0.49225ms)
+✔ normalize DE (0.56975ms)
+✔ reject overlong owner phone (0.074042ms)
+✔ allow only HubSpot native form checkout (0.248125ms)
+✔ failed save blocks checkout (0.475291ms)
+✔ timeout blocks checkout (4.978625ms)
+✔ localhost cannot pollute CRM (0.151167ms)
+✔ successful native response used unchanged (0.106291ms)
+✔ WhatsApp exact recipient and all details, escaped punctuation (0.285917ms)
+✔ saved data TTL, corrupt data and customer isolation (0.521042ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.372958

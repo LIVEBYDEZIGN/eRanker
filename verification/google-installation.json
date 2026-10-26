@@ -1,0 +1,18 @@
+{
+  "gtm_verified_pages": [
+    "ranking-test.html",
+    "index.html",
+    "terms.html",
+    "results.html",
+    "checkout.html",
+    "reviews.html",
+    "privacy.html",
+    "payment-complete.html",
+    "assets/overview-transcript.html"
+  ],
+  "container_id": "GTM-WLTZBCJ4",
+  "ga4_id": "G-FQ5CDMGQ6G",
+  "container_public_version": "1",
+  "container_tags_before": 0,
+  "private_analytics_disabled": true
+}
