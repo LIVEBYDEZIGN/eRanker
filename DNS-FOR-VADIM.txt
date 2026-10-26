@@ -1,0 +1,12 @@
+Google Search Console domain verification for eranker.net
+
+Provider: Cloudflare
+Record type: TXT
+Name: @
+Content: google-site-verification=aPfDsdoCKlJ0JflkrOH8D5vjZQ8HWZhVo7k8hIPHPYc
+TTL: Auto
+
+Add this record alongside the existing TXT records. Do not replace the existing Google verification, SPF or Stripe records.
+After saving, read back the value in DNS and click Verify in the intended Search Console property.
+
+Status on 26 October 2026: prepared, not added. Ion confirmed Vadim will add it at publication. Authoritative nameservers are deborah.ns.cloudflare.com and ned.ns.cloudflare.com. The supplied value is not in public DNS. No DNS settings changed.
